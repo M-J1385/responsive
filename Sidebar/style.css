@@ -1,0 +1,405 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: fixed;
+    top: 0;
+}
+
+header .main-header {
+    width: 100%;
+    height: 80px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+}
+
+header .sub-header {
+    width: 100%;
+    height: 70px;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.main-header .logo {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header .left {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: blue;
+}
+
+.main-header .right {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    text-align: right;
+    align-items: center;
+    justify-content: right;
+    background-color: violet;
+}
+
+.main-header .logo a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.main-header .logo a img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-header .user-status {
+    width: fit-content;
+    height: 100%;
+    background-color: green;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header .user-status a {
+    width: max-content;
+    height: auto;
+    padding: 10px 20px;
+    background-color: cyan;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin: 0 10px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.main-header .user-status a::after {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    transition: 0.4s;
+    background-color: yellow;
+    z-index: -1;
+}
+
+.main-header .user-status a:hover::after {
+    left: 0;
+}
+
+.main-header .sidebtn {
+    width: fit-content;
+    height: 100%;
+    background-color: purple;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header .sidebtn i {
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+@media screen and (max-width:980px) {
+    .main-header .left {
+        width: 50%;
+    }
+
+    .main-header .right {
+        width: 50%;
+    }
+}
+
+.sub-header .main-menu {
+    width: 50%;
+    height: 100%;
+    background-color: lawngreen;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sub-header .main-menu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-header .main-menu ul li {
+    width: auto;
+    height: 40px;
+    background-color: rgb(255, 70, 70);
+    list-style: none;
+    border-radius: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.sub-header .main-menu ul li a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    padding: 0 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: black;
+    position: relative;
+    transition: 0.4s;
+    background-color: transparent;
+    position: relative;
+    z-index: 0;
+}
+
+.sub-header .main-menu ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: yellow;
+    transition: 0.4s;
+    z-index: -1;
+}
+
+.sub-header .main-menu ul li a:hover::before {
+    left: 0;
+}
+
+.sub-header .search {
+    width: 30%;
+    height: 100%;
+    background-color: indigo;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-header .search form {
+    width: 100%;
+    height: 100%;
+    background-color: indianred;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sub-header .search form input[type='text'] {
+    width: 100%;
+    height: 20px;
+    padding: 10px 50px 10px 20px;
+    direction: ltr;
+    font-size: 20px;
+    border-radius: 50px;
+    border: 2px solid black;
+    outline: none;
+}
+
+.sub-header .search form i {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.sub-header .social {
+    width: 20%;
+    height: 100%;
+    background-color: seagreen;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-header .social ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-header .social ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.sub-header .social ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.sub-header .social ul li a i {
+    font-size: 25px;
+}
+
+.fa-telegram {
+    color: rgb(0, 170, 255);
+}
+
+.fa-instagram {
+    background: linear-gradient(45deg, red, blue);
+    border-radius: 3px;
+    color: black;
+}
+
+.barmenu {
+    display: none;
+}
+
+
+.barlist {
+    display: none;
+}
+
+@media screen and (max-width:960px) {
+    .sub-header .main-menu ul {
+        display: none;
+    }
+
+    /* header .sub-header {
+        justify-content: center;
+    } */
+
+    /* header .sub-header>* {
+        margin: 0 30px;
+    } */
+
+    .barmenu {
+        display: flex;
+    }
+
+    .barlist {
+        display: block;
+        position: absolute;
+        right: 0;
+        background-color: red;
+        top: 100%;
+    }
+
+    .sub-header .social {
+        width: 30%;
+    }
+}
+
+/* @media screen and (max-width:500px) {
+    .sub-header .social {
+        width: 40%;
+    } */
+
+/* .sub-header .search{ */
+/* width: 80%; */
+/* display: none; */
+/* } */
+
+/* header .sub-header{
+        width: 100% !important;
+        justify-content: center;
+    }
+
+    header .sub-header>* {
+        margin: 0;
+    } */
+/* } */
+
+@media screen and (max-width:500px) {
+    .main-header .right {
+        width: 40%;
+    }
+
+    .main-header .left {
+        width: 60%;
+    }
+
+    .sub-header .main-menu {
+        width: auto;
+    }
+
+    .sub-header .social {
+        width: auto;
+    }
+
+    .sub-header .search {
+        width: auto;
+    }
+}
+
+@media screen and (max-width:425px) {
+
+    header .main-header {
+        justify-content: space-between;
+    }
+
+    .main-header .right {
+        width: auto;
+    }
+
+    .main-header .left {
+        width: auto;
+    }
+
+    .main-header .user-status a {
+        margin: 0 5px;
+        padding: 5px 10px;
+        font-size: 17px;
+    }
+
+    .sub-header .social ul li {
+        margin: 0 5px;
+    }
+
+    .main-header .logo a {
+        height: 50%;
+    }
+}
