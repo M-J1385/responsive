@@ -22,15 +22,27 @@
             <a href="signup.php" id="signup">Signup</a>
           </div>
           <div class="sidebtn">
-            <i class="fa-solid fa-bars"></i>
+            <i onclick="opensidebar()" class="fa-solid fa-bars"></i>
+            <div class="sidebar">
+              <i onclick="closesidebar()" class="fa-solid fa-close"></i>
+              <h2>Wellcom</h2>
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+              <h2>Categories</h2>
+              <a href="#">gard</a>
+              <a href="#">glass</a>
+              <a href="#">samsung</a>
+              <a href="#">xiaomi</a>
+            </div>
           </div>
         </div>
       </div>
       <div class="sub-header">
         <div class="main-menu">
-          <div class="barlist"><a href="#">home</a></div>
           <div class="barmenu">
             <i onclick="openmenu()" class="fa-solid fa-bars fa-2x"></i>
+            <div class="barlist"></div>
           </div>
           <ul>
             <li><a href="#">Home</a></li>
@@ -54,16 +66,28 @@
         <div class="social">
           <ul>
             <li>
-              <a href="#"><i class="fa-brands fa-telegram"></i></a>
+              <a href="#"
+                ><i class="fa-brands fa-telegram"></i
+                ><label class="telegramlbl">Telegram</label></a
+              >
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"
+                ><i class="fa-brands fa-instagram"></i
+                ><label class="instagramlbl">Instagram</label></a
+              >
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+              <a href="#"
+                ><i class="fa-brands fa-square-x-twitter"></i
+                ><label class="twitterlbl">Twitter(X)</label></a
+              >
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#"
+                ><i class="fa-brands fa-linkedin"></i
+                ><label class="linkedinlbl">Linkedin</label></a
+              >
             </li>
           </ul>
         </div>
