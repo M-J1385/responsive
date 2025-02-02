@@ -148,7 +148,6 @@ header .sub-header {
     text-align: center;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .sub-header .main-menu ul {
@@ -238,6 +237,12 @@ header .sub-header {
     border-radius: 50px;
     border: 2px solid black;
     outline: none;
+    transition: 0.4s;
+}
+
+.sub-header .search form input[type='text']:focus {
+    border: 2px solid transparent;
+    box-shadow: 0 0 6px 2px rgb(5, 254, 5);
 }
 
 .sub-header .search form i {
@@ -273,34 +278,105 @@ header .sub-header {
 .sub-header .social ul li {
     list-style: none;
     margin: 0 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .sub-header .social ul li a {
     text-decoration: none;
     color: black;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .sub-header .social ul li a i {
+    width: 100%;
+    height: 100%;
     font-size: 25px;
+    position: absolute;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
 }
 
-.fa-telegram {
-    color: rgb(0, 170, 255);
+.sub-header .social ul li a label {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    display: inline-block;
+    transform: translate(-50%, 0) scale(0);
+    transition: 0.4s;
+    z-index: 1;
 }
 
-.fa-instagram {
-    background: linear-gradient(45deg, red, blue);
-    border-radius: 3px;
-    color: black;
+.sub-header .social ul li a label.telegramlbl {
+    background-color: rgb(0, 145, 255);
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.sub-header .social ul li a label.instagramlbl {
+    background: linear-gradient(45deg, purple, rgb(255, 196, 0));
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.sub-header .social ul li a label.linkedinlbl {
+    background-color: rgb(53, 53, 255);
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.sub-header .social ul li a label.twitterlbl {
+    background-color: rgb(53, 174, 255);
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.sub-header .social ul li a i:hover+label {
+    top: -25px;
+    transform: translate(-50%, 0) scale(1);
 }
 
 .barmenu {
     display: none;
+    background-color: green;
+
 }
 
 
 .barlist {
     display: none;
+}
+
+.barlist a {
+    text-decoration: none;
+    color: black;
+    margin: 5px 0;
+    width: 100%;
+    padding: 5px 0px;
+    background-color: yellow;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.barlist a:hover {
+    background-color: green;
+}
+
+.barmenu i {
+    cursor: pointer;
 }
 
 @media screen and (max-width:960px) {
@@ -317,13 +393,22 @@ header .sub-header {
     } */
 
     .barmenu {
+        height: 100%;
         display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: relative;
     }
 
     .barlist {
-        display: block;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         position: absolute;
         right: 0;
+        padding: 5px 0;
         background-color: red;
         top: 100%;
     }
@@ -402,4 +487,66 @@ header .sub-header {
     .main-header .logo a {
         height: 50%;
     }
+}
+
+@media screen and (max-width:250px) {
+    .main-header .user-status {
+        flex-direction: column;
+    }
+
+    .main-header .user-status a {
+        margin: 5px 0;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    z-index: 999;
+    background-color: gainsboro;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    padding: 0 0;
+    padding-top: 40px;
+    transition: 0.6s;
+}
+
+.sidebar i {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    transition: 0.3s;
+}
+
+.sidebar i:hover {
+    color: rgb(255, 59, 59);
+}
+
+.sidebar h2 {
+    color: black;
+    font-weight: bolder;
+    width: 100%;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: rgb(89, 89, 89);
+    display: inline-block;
+    font-size: 18px;
+    width: 100%;
+    transition: 0.2s;
+    text-align: left;
+    margin: 5px 0;
+}
+
+.sidebar a:hover {
+    transform: translateX(10px);
 }
